@@ -1,0 +1,21 @@
+<div class="containers">
+  <div class="table">
+    <div class="header">
+      <div class="titles">#</div>
+      <div class="titles" *ngFor="let items of headers">{{items}}</div>
+
+    </div>
+    <div class="body" *ngFor="let item  of dataTable ,let index=index">
+      <div class="resultsIndex">{{index+1}}</div>
+      <div class="results" *ngFor="let items of headers">
+        {{items!=='value'?item[items]:item[items]|currency:'USD':true:'2.0-0'}}
+      </div>
+      <div class="btnOption">
+        <button mat-raised-button color="primary" *ngIf="item['state']==='aprobado'" (click)="collect(index,item)">Cobrar credito</button>
+      </div>
+    </div>
+  </div>
+  <div class="footerTable">
+    <div class="txtTotalRecords">Número de registros: {{dataTable.length}}</div>
+  </div>
+</div>

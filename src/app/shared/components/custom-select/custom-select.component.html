@@ -1,0 +1,8 @@
+<mat-form-field appearance="fill">
+  <mat-label>{{title}}</mat-label>
+  <mat-select (valueChange)="emmiter.emit($event)">
+    <mat-option *ngFor="let item of optionsList" [value]="item">
+      {{item|currency:'USD':true:'2.0-0'}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

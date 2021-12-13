@@ -1,0 +1,71 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.error-input input,
+.error-input input {
+  border-color: red !important;
+}
+.custom-Input:hover .tooltip {
+  opacity: 1;
+}
+
+.custom-Selector:hover .tooltip {
+  position: absolute;
+  opacity: 1;
+}
+.tooltip {
+  position: absolute;
+  left: 0;
+  top: 48px;
+  opacity: 0;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.custom-Selector .tooltip {
+  top: 40px;
+}
+
+.input-text {
+  width: 100%;
+  border: none;
+  border-bottom: solid 1.5px #cacaca;
+  font: normal normal normal 12px/17px Open Sans;
+  font-weight: normal;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.input-text:focus {
+  outline: none;
+  border: none;
+  border-bottom: solid 1.5px;
+  border-color: #005f9f !important;
+}
+// Responsive
+// Pantallas extra anchas
+@mixin large {
+  @media only screen and(min-width: 1400px) {
+    @content;
+  }
+}
+
+// Pantallas medianas
+@mixin medium {
+  @media only screen and(min-width: 1024px) {
+    @content;
+  }
+}
+
+// Pantallas pequeñas
+@mixin small {
+  @media only screen and (max-width: 1024px) {
+    @content;
+  }
+}
+// Pantallas pequeñas
+@mixin extraSmall {
+  @media only screen and(max-width: 600px) {
+    @content;
+  }
+}

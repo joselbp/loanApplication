@@ -1,0 +1,11 @@
+<mat-toolbar class='toolbar' color="primary">
+  <div fxHide.gt-xs>
+    <button mat-icon-button>
+      <mat-icon routerLink='home' >{{icon}}</mat-icon>
+    </button>
+
+  </div>
+  <div class="navigation" >
+    <a *ngFor="let links of arrayLinks" mat-button [routerLink]="[links.path]" >{{links.name}}</a>
+  </div>
+</mat-toolbar>

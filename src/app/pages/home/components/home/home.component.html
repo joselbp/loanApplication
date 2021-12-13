@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="card" *ngFor="let item of getPaths()">
+    <mat-card class="mat-card" (click)="openDialog(item.name)" [matTooltip]="item.name">
+      <mat-card-title>{{ item.name }}</mat-card-title>
+      <mat-card-content
+        ><img mat-card-image [src]="item.icon"
+      /></mat-card-content>
+    </mat-card>
+  </div>
+
+</div>
+
+<app-dialogs #userCreation ></app-dialogs>
+<app-dialogs #loansRequested></app-dialogs>

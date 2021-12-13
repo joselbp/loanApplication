@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-header><mat-card-title> User creation</mat-card-title><div class="exit" (click)="close()" *ngIf="showIconExit">X</div></mat-card-header>
+  <mat-card-content>
+<div class="userCreation" [formGroup]="form">
+  <div class="row">
+    <app-custom-imput [type]="'text'" [maxChars]="250" [label]="'Name'" [width]="60"
+    [control]="this.form.controls.name" [height]="20" formControlName="name"></app-custom-imput> </div>
+<div class="row"><app-custom-imput [type]="'text'" [maxChars]="250" [label]="'Identification'" [width]="60"
+  [control]="this.form.controls.identification" [height]="20" formControlName="identification"></app-custom-imput></div>
+<div class="row"><app-custom-imput [type]="'text'" [maxChars]="250" [label]="'Email'" [width]="60"
+  [control]="this.form.controls.email" [height]="20" formControlName="email"></app-custom-imput></div>
+</div>
+
+<div class="loan" *ngIf="form.valid">
+  <app-select-loan (selectValue)="setValue($event)"></app-select-loan>
+</div>
+  </mat-card-content>
+  <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="close()">CANCELAR</button>
+      <button mat-raised-button color="primary" [disabled]="this.form.controls?.value?.value<100" (click)="confirm()">ACEPTAR</button>
+  </mat-card-actions>
+</mat-card>

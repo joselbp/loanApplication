@@ -1,0 +1,39 @@
+@import '../../../../../styles.scss';
+.container {
+  height: 70%;
+  display: flex;
+  flex-flow: row wrap;
+  bottom: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  .card {
+    margin-top: -10%;
+    display: flex;
+    justify-content: center;
+    min-width: 30%;
+    min-height: 20%;
+    .mat-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 70%;
+      height: 130px;
+      background-color: rgb(245, 244, 244);
+      text-align: center;
+      transition: all 0.1s ease-in;
+
+      &:hover {
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+      }
+      mat-card-content{
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        img {
+        width: 20%;
+      }}
+    }
+  }
+}

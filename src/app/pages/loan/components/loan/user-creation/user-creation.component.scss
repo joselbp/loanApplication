@@ -1,0 +1,35 @@
+mat-card-header{
+  justify-content: space-between;
+  align-items: center;
+  .exit {
+cursor: pointer;
+    font-weight: bold;
+    opacity: 1;
+  }
+
+}
+
+mat-card-actions{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userCreation{
+
+  .row{
+    display: flex;
+    min-width: 90%;
+    margin-top: 10px;
+     app-custom-imput{
+      width: 100%!important;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+.loan{
+  margin-top: 30px;
+  display: flex;
+
+  justify-content: center;
+}
